@@ -24,7 +24,7 @@ Then, install python packages:
 pip install -r requirements.txt
 ```
 
-In order to generate attribution maps from Deep Models, you also need to download [*"DeepExplain"*](https://github.com/marcoancona/DeepExplain)  and copy it to your project directory.
+In order to generate attribution maps from Deep Models, you also need to download [*DeepExplain*](https://github.com/marcoancona/DeepExplain)  and copy it to your project directory.
 
 ```
 cp -r $DOWNLOADS/DeepExplain-master/deepexplain $DIR/
@@ -34,9 +34,9 @@ cp -r $DOWNLOADS/DeepExplain-master/deepexplain $DIR/
 
 Those datasets involved in this project are:
 
-- [*"Taskonomy Tiny"*](https://github.com/StanfordVL/taskonomy/tree/master/data#downloading-the-dataset)
-- [*"MS COCO"*](http://images.cocodataset.org/zips/test2014.zip)
-- [*"Indoor Scene"*](http://groups.csail.mit.edu/vision/LabelMe/NewImages/indoorCVPR_09.tar)
+- [*Taskonomy Tiny*](https://github.com/StanfordVL/taskonomy/tree/master/data#downloading-the-dataset)
+- [*MS COCO*](http://images.cocodataset.org/zips/test2014.zip)
+- [*Indoor Scene*](http://groups.csail.mit.edu/vision/LabelMe/NewImages/indoorCVPR_09.tar)
 
 ## Running the tests
 
@@ -73,7 +73,7 @@ If you find this code useful, please cite the following:
 
 ```
 
+## Contact
 
-
-
+If you have any question, please feel free to contact sjie@zju.edu.cn 
 
