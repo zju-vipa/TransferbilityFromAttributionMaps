@@ -109,13 +109,7 @@ matlab --nosplash --nodesktop task_similarity_tree.m
 If you find this code useful, please cite the following:
 
 ```
-@inproceedings{,
-	title={},
-  author={},
-  booktitle={},
-  year={},
-  organization={}
-}
+
 ```
 
 ## Contact
