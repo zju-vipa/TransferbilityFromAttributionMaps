@@ -95,19 +95,13 @@ python ahp.py --dataset indoor
 Plot P@K, R@K Curve:
 
 ```  
-python plot.py --affinity-matrix $SOURCENPY
+python plot.py
 ```
 
 Plot Task Similarity Tree:
 
 ```
-matlab task_similarity_tree.m --affinity-matrix $SOURCENPY
-```
-
-Visualize some attribution maps of Input data:
-
-```
-python viz.py 
+matlab --nosplash --nodesktop task_similarity_tree.m
 ```
 
 ## Citation
