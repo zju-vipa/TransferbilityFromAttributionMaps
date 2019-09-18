@@ -4,6 +4,8 @@
 
   J. Song, Y. Chen, X. Wang, C. Shen, M. Song
 
+![](/Users/chyx/Documents/GitHub/TransferbilityFromAttributionMaps/demo/illus.png)
+
 ## Getting Started
 
 These instructions below will get you a copy of the project up and running on your local machine for development and testing purposes.
