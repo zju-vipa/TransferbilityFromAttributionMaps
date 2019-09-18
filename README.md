@@ -4,7 +4,7 @@
 
   J. Song, Y. Chen, X. Wang, C. Shen, M. Song
 
-![](https://github.com/DeepDarkFantasy20/TransferbilityFromAttributionMaps/tree/master/demo/illus.png)
+![](demo/illus.png)
 
 ## Getting Started
 
