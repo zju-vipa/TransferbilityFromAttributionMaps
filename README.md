@@ -24,7 +24,7 @@ Then, install python packages:
 pip install -r requirements.txt
 ```
 
-In order to generate attribution maps from Deep Models, you also need to download [DeepExplain](https://github.com/marcoancona/DeepExplain)  and copy it to your project directory.
+In order to generate attribution maps from Deep Models, you also need to download [DeepExplain](https://github.com/marcoancona/DeepExplain) and copy it to your project directory **$DIR**.
 
 ```
 cp -r DeepExplain-master/deepexplain $DIR/lib/
@@ -75,7 +75,7 @@ sh tools/download_model.sh
 
 ## Running the tests
 
-Generate Attribution Maps and save corresponding Attributions to explain results directory:
+First, generate Attribution Maps and save corresponding Attributions to explain results directory:
 
 ```
 cd tools
@@ -84,12 +84,12 @@ python deep_attribution.py --dataset coco --explain_result_root explain_result
 python deep_attribution.py --dataset indoor --explain_result_root explain_result
 ```
 
-Calculate affinity matrix of those tasks according to the Attributions:
+Calculate affinity matrix of those tasks according to the Attribution Maps:
 
 ```
-python ahp.py --dataset taskonomy
-python ahp.py --dataset coco
-python ahp.py --dataset indoor
+python affinity.py --dataset taskonomy
+python affinity.py --dataset coco
+python affinity.py --dataset indoor
 ```
 
 Plot P@K, R@K Curve:
@@ -101,7 +101,7 @@ python plot.py
 Plot Task Similarity Tree:
 
 ```
-matlab --nosplash --nodesktop task_similarity_tree.m
+matlab -nosplash -nodesktop task_similarity_tree.m
 ```
 
 ## Citation
