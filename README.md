@@ -99,7 +99,7 @@ python affinity.py --dataset indoor --imlist-size 1005
 Plot P@K, R@K Curve, make sure you've already completed testing on three datasets:
 
 ```  
-python plot.py --result-save fig
+python plot.py --fig-save fig
 ```
 
 Plot Task Similarity Tree:
@@ -113,7 +113,7 @@ matlab -nosplash -nodesktop task_similarity_tree.m
 If you find this code useful, please cite the following:
 
 ```
-
+TBD
 ```
 
 ## Contact
