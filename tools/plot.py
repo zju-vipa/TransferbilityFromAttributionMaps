@@ -68,6 +68,8 @@ parser.set_defaults(fig_save='fig')
 args = parser.parse_args()
 
 prj_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+if not os.path.exists(os.path.join(prj_dir, args.fig_save)):
+    os.mkdir(os.path.join(prj_dir, args.fig_save))
 explain_result = args.explain_result_root
 explain_methods = {'saliency': 'saliency', 'grad*input': 'gradXinput', 'elrp': 'elrp'}
 method_index_mapping = {'saliency': 0, 'grad*input': 1, 'elrp': 2}
