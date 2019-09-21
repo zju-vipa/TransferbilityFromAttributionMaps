@@ -1,9 +1,14 @@
 clear,clc
 
-load('../explain_result/taskonomy/affinity.mat');
-affinity_saliency = affinity(1);
-affinity_gradxinput = affinity(2);
-affinity_elrp = affinity(3);
+%load('../explain_result/taskonomy/affinity.mat');
+load('~/Downloads/affinity.mat')
+affinity_saliency = squeeze(affinity(1, :, :));
+affinity_gradxinput = squeeze(affinity(2, :, :));
+affinity_elrp = squeeze(affinity(3, :, :));
+
+affinity_saliency([8,20],:) = [];
+affinity_gradxinput([8,20],:) = [];
+affinity_elrp([8,20],:) = [];
 
 task_list = {'Autoencoder', 'Curvature', 'Denoise', 'Edge 2D', 'Edge 3D', ...
 'Keypoint 2D','Keypoint 3D', ...

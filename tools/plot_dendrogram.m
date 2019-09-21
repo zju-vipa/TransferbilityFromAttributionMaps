@@ -4,6 +4,7 @@ function plot_dendrogram(affinity_matrix,task_list_labels)
     dimension2 = {'Edge 2D','Keypoint 2D','Colorization','Inpainting Whole','Autoencoder','Segment 2D','Denoise'};
     dimension3 = {'Curvature','Edge 3D','Keypoint 3D','Reshade','Rgb2depth','Rgb2sfnorm','Segment 25D','Rgb2mist'};
     
+    figure
     Z = linkage(affinity_matrix);
     D = pdist(affinity_matrix);
     leafOrder = optimalleaforder(Z,D);
@@ -21,5 +22,5 @@ function plot_dendrogram(affinity_matrix,task_list_labels)
             task_list_labels{i} = ['\color{black} ' task_list_labels{i}];
         end
     end
-    dendrogram(Z,20,'Orientation','left','Labels',task_list_labels,'Reorder',leafOrder)
+    dendrogram(Z,20,'Orientation','left','ColorThreshold','default','Labels',task_list_labels,'Reorder',leafOrder)
 end

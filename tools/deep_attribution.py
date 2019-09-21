@@ -14,10 +14,6 @@ import random
 import utils
 import lib.data.load_ops as load_ops
 from lib.deepexplain.tensorflow import DeepExplain
-os.environ['CUDA_VISIBLE_DEVICES'] = '1'
-cur_dir = os.path.dirname(__file__)
-prj_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-
 
 parser = argparse.ArgumentParser()
 
@@ -25,10 +21,19 @@ parser.add_argument('--explain-result-root', dest='explain_result_root', type=st
 parser.set_defaults(explain_result_root='explain_result')
 
 parser.add_argument('--dataset', dest='dataset', type=str)
-parser.set_defaults(dataset='taskonomy')
+parser.set_defaults(dataset='coco')
 
 parser.add_argument('--imlist-size', dest='imlist_size', type=int)
 parser.set_defaults(imlist_size=1000)
+
+parser.add_argument('--gpu', dest='gpu', type=str)
+parser.set_defaults(gpu='0')
+
+args = parser.parse_args()
+
+os.environ['CUDA_VISIBLE_DEVICES'] = args.gpu
+cur_dir = os.path.dirname(__file__)
+prj_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
 tf.logging.set_verbosity(tf.logging.ERROR)
 
@@ -59,10 +64,8 @@ def generate_cfg(task):
 def deep_attribution():
     import general_utils
     from general_utils import RuntimeDeterminedEnviromentVars
-
     tf.logging.set_verbosity(tf.logging.ERROR)
 
-    args = parser.parse_args()
     imlist_file_path = os.path.join(prj_dir, args.explain_result_root, args.dataset, 'imlist.txt')
     explain_result_root = os.path.join(prj_dir, args.explain_result_root, args.dataset)
     with open(imlist_file_path) as f:

@@ -65,11 +65,11 @@ Those datasets need to be arranged in the following format:
 |   |   |   |---...
 ```
 
-You can also check **$DIR/explain_result/name_of_dataset/imlist.txt** to find out how those images are arranged.
+You can also check **$DIR/explain_result/name_of_dataset/imlist.txt** to find out how those images are arranged(Note that images in the *imlist.txt* are randomly selected from dataset, please feel free to test using more images).  
 
-### Pretrained Models
+### Pre-trained Models
 
-Download pretrained models:
+Download pre-trained models:
 
 ```
 sh tools/download_model.sh
@@ -77,27 +77,29 @@ sh tools/download_model.sh
 
 ## Running the tests
 
-First, generate Attribution Maps and save corresponding Attributions to explain results directory:
+First, generate Attribution Maps and save corresponding Attribution maps to explain results directory:
 
 ```
 cd tools
-python deep_attribution.py --dataset taskonomy --explain_result_root explain_result 
-python deep_attribution.py --dataset coco --explain_result_root explain_result
-python deep_attribution.py --dataset indoor --explain_result_root explain_result
+python deep_attribution.py --explain_result_root explain_result --dataset taskonomy --imlist-size 1000
+python deep_attribution.py --explain_result_root explain_result --dataset coco --imlist-size 1000
+python deep_attribution.py --explain_result_root explain_result --dataset indoor --imlist-size 1005
 ```
 
 Calculate affinity matrix of those tasks according to the Attribution Maps:
 
 ```
-python affinity.py --dataset taskonomy
-python affinity.py --dataset coco
-python affinity.py --dataset indoor
+python affinity.py --dataset taskonomy --imlist-size 1000
+python affinity.py --dataset coco --imlist-size 1000
+python affinity.py --dataset indoor --imlist-size 1005
 ```
 
-Plot P@K, R@K Curve:
+## Visualization
+
+Plot P@K, R@K Curve, make sure you've already completed testing on three datasets:
 
 ```  
-python plot.py
+python plot.py --result-save fig
 ```
 
 Plot Task Similarity Tree:
@@ -116,5 +118,8 @@ If you find this code useful, please cite the following:
 
 ## Contact
 
-If you have any question, please feel free to contact (Jie Song, sjie@zju.edu.cn) 
+If you have any question, please feel free to contact
 
+Jie Song, sjie@zju.edu.cn; 
+
+Yixin Chen, chenyix@zju.edu.cn.
