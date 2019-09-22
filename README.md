@@ -26,7 +26,7 @@ Then, install python packages:
 pip install -r requirements.txt
 ```
 
-In order to generate attribution maps from Deep Models, you also need to download [DeepExplain](https://github.com/marcoancona/DeepExplain) and copy it to your project directory **$DIR**.
+In order to generate attribution maps from Deep Models, you also need to download [DeepExplain](https://github.com/marcoancona/DeepExplain) which this project utilizes to generate attribution maps, and copy it to your project directory **$DIR**.
 
 ```
 cp -r DeepExplain-master/deepexplain $DIR/lib/
@@ -113,7 +113,12 @@ matlab -nosplash -nodesktop task_similarity_tree.m
 If you find this code useful, please cite the following:
 
 ```
-TBD
+@inproceedings{ModelTransfer_NeurIPS2019,
+  title={Deep Model Transferbility from Attribution Maps},
+  author={Jie Song, Yixin Chen, Xinchao Wang, Chengchao Shen, Mingli Song},
+  booktitle={NeurIPS},
+  year={2019}
+}
 ```
 
 ## Contact
