@@ -102,6 +102,10 @@ Plot P@K, R@K Curve, make sure you've already completed testing on three dataset
 python plot.py --fig-save fig
 ```
 
+e.g.
+
+<img src="demo/precision.png" width="380" height="296" alt="图片名称" align=center>
+
 Plot Task Similarity Tree:
 
 ```
@@ -110,29 +114,7 @@ matlab -nosplash -nodesktop task_similarity_tree.m
 
 e.g.
 
-<img src="demo/precision.png" width="380" height="296" alt="图片名称" align=left><img src="demo/tree.png" width="380" height="296" alt="图片名称" align=right>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img src="demo/tree.png" width="380" height="296" alt="图片名称" align=center>
 
 ## Citation
 
