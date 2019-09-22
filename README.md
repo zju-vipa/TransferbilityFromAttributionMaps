@@ -1,6 +1,6 @@
 # Deep Model Transferbility from Attribution Maps
 
-- [*"Paper: Deep Model Transferbility from Attribution Maps"*](https:), NeurIPS 2019.
+- [*"Paper: Deep Model Transferbility from Attribution Maps"*](https:), NeurIPS 2019.(released soon)
 
   J. Song, Y. Chen, X. Wang, C. Shen, M. Song
 
@@ -108,6 +108,24 @@ Plot Task Similarity Tree:
 matlab -nosplash -nodesktop task_similarity_tree.m
 ```
 
+e.g.
+
+<img src="demo/precision.png" width="380" height="296" alt="图片名称" align=left><img src="demo/tree.png" width="380" height="296" alt="图片名称" align=right>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Citation
 
 If you find this code useful, please cite the following:
@@ -120,6 +138,12 @@ If you find this code useful, please cite the following:
   year={2019}
 }
 ```
+
+## Todo
+
+Release code of experiment generating attribution maps based on other kinds of pre-trained models(different tasks, different architectures, etc.).
+
+Apply more explain methods and see how they work.
 
 ## Contact
 
