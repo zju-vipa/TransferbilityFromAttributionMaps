@@ -148,3 +148,11 @@ If you have any question, please feel free to contact
 Jie Song, sjie@zju.edu.cn; 
 
 Yixin Chen, chenyix@zju.edu.cn.
+
+[Homepage of VIPA Group](https://www.vipazoo.cn/index_en.html), Zhejiang University, China
+
+<div  align="left">  
+<img src="docs/vipa-logo.png" width = "40%" height = "40%" alt="icon"/>  
+</div>
+
+
