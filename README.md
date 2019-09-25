@@ -116,6 +116,18 @@ e.g.
 
 <img src="demo/tree.png" width="380" height="296" alt="图片名称" align=center>
 
+## Todo
+
+Release code of experiment generating attribution maps based on other kinds of pre-trained models(different tasks, different architectures, etc.).
+
+Apply more explain methods and see how they work.
+
+## Acknowledgement
+
+This repo is built upon the code from [Taskonomy](http://taskonomy.stanford.edu/).
+
+And we thank [deepexplain](https://github.com/marcoancona/DeepExplain) for providing the attribution tools.
+
 ## Citation
 
 If you find this code useful, please cite the following:
@@ -128,12 +140,6 @@ If you find this code useful, please cite the following:
   year={2019}
 }
 ```
-
-## Todo
-
-Release code of experiment generating attribution maps based on other kinds of pre-trained models(different tasks, different architectures, etc.).
-
-Apply more explain methods and see how they work.
 
 ## Contact
 
